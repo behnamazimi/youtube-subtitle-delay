@@ -1,0 +1,112 @@
+body.dyst {
+    font-size: 16px;
+    margin: 0;
+    width: 320px;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+}
+
+.popup {
+    position: relative;
+    padding: 40px 16px 16px;
+}
+
+.popup a {
+    cursor: pointer;
+}
+
+.popup .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--dyst-color-text-dark);
+}
+
+.popup .header .brand {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: var(--dyst-color-text-light);
+}
+
+.popup .header .brand img {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    margin-right: 0.25rem;
+    border-radius: 3px;
+}
+
+.popup .header a {
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.popup .header a svg {
+    margin-right: 4px;
+}
+
+.popup .options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 0;
+    border-top: 1px solid #797979;
+}
+
+.popup .options label {
+    font-size: 14px;
+}
+
+.popup .options input {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.popup .options > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.dyst .popup button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 5px 16px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.popup .tip {
+    margin-top: 16px
+}
+
+.popup .tip small {
+    margin-top: 6px;
+    display: block;
+    opacity: 1;
+}
+
+.popup .tip small span{
+    display: inline-flex;
+    border-radius: 4px;
+    background-color: var(--dyst-color-success);
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}

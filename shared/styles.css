@@ -1,0 +1,164 @@
+body {
+    --dyst-color-main: #000d1c;
+    --dyst-color-main-light: #00356e;
+    --dyst-color-main-dark: #000000;
+    --dyst-color-text: #d5d5d5;
+    --dyst-color-text-light: #fff;
+    --dyst-color-text-dark: #afafaf;
+    --dyst-color-success: #054978;
+    --dyst-color-success-light: #06568c;
+    --dyst-color-success-dark: #043b60;
+}
+
+.dyst *:not(pre):not(code) {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+body.dyst {
+    margin: 0 auto;
+    max-width: 768px;
+    font-size: 16px;
+    color: var(--dyst-color-text);
+    cursor: default;
+    background: var(--dyst-color-main);
+    user-select: none;
+    overflow-y: scroll;
+}
+
+body.dyst.docs {
+    line-height: 24px;
+}
+
+body.dyst a,
+body .dyst a {
+    color: var(--dyst-color-text);
+}
+
+.dyst a:hover {
+    color: var(--dyst-color-text-light);
+}
+
+.dyst .page {
+    padding: 2rem 1rem;
+}
+
+.dyst .page .page-head {
+    position: relative;
+}
+
+.dyst .page .brand {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+}
+
+.dyst small {
+    all: inherit;
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: lighter;
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: var(--dyst-color-text);
+}
+
+.dyst label {
+    width: 100%;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+}
+
+.dyst textarea,
+.dyst input[type="search"],
+.dyst input[type="number"],
+.dyst input[type="text"] {
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    background: #84848461;
+    border: none;
+    border-radius: 5px;
+    color: var(--dyst-color-text);
+    max-width: 100%;
+}
+
+.dyst textarea::placeholder,
+.dyst input::placeholder {
+    color: var(--dyst-color-text-dark);
+}
+
+.dyst textarea:focus,
+.dyst input[type="search"]:focus,
+.dyst input[type="number"]:focus,
+.dyst input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px #ffffff94;
+    color: var(--dyst-color-text-light);
+}
+
+.dyst button {
+    all: initial;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 50px;
+    display: inline-block;
+    padding: 5px 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 6px;
+    color: var(--dyst-color-text-light);
+    background-color: var(--dyst-color-success);
+    user-select: none;
+    appearance: none;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.dyst button:not(:disabled):hover {
+    cursor: pointer;
+    background-color: var(--dyst-color-success-dark);
+}
+
+.dyst button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.dyst button.cancel {
+    background: transparent;
+    color: var(--dyst-color-text);
+    margin-right: 8px;
+}
+
+.dyst button.cancel:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dyst button.outline {
+    background: transparent;
+    color: var(--dyst-color-text);
+    border: 1px solid var(--dyst-color-text);
+}
+
+.dyst button.outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dyst-toast {
+    position: fixed;
+    left: 1rem;
+    bottom: 1.5rem;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    max-width: calc(100% - 2rem);
+    width: auto;
+    background-color: #000;
+    color: #ffffff;
+    z-index: 9999999;
+}
