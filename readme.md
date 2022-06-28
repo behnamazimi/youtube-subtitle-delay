@@ -2,7 +2,7 @@
 
 Mini tool to delay subtitles on the YouTube official website.
 
-**[Chrome Web Store](#)**
+**[Chrome Web Store](https://chrome.google.com/webstore/detail/youtube-subtitle-delay/fegfigommgpglnlpdmgncojmkghbijkc?hl=en&authuser=1)**
 
 As you may know, YouTube doesn't have this functionality by default, and sometimes being able to delay subtitle
 streaming can be of great help, especially when you're trying to learn a new language.
@@ -12,7 +12,7 @@ options soon and make this extension useless :)
 
 ### How to install?
 
-It's available on **[Chrome Web Store](#)**.
+It's available on **[Chrome Web Store](https://chrome.google.com/webstore/detail/youtube-subtitle-delay/fegfigommgpglnlpdmgncojmkghbijkc?hl=en&authuser=1)**.
 
 ### How to install it manually on Chromium base browsers?
 
