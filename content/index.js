@@ -125,8 +125,10 @@ function showToast(msg, hideDelay = 3000) {
     msgElm.setAttribute("id", "dyst-toast")
     msgElm.classList.add("dyst-toast")
   }
-  msgElm.innerText = msg
-  document.body.appendChild(msgElm)
+  msgElm.innerText = msg;
+
+  // append as a sibling of delayed element or as an element of body
+  (delayedSubtitleElm?.parentNode || document.body).appendChild(msgElm)
 
   if (!hideDelay) {
     return msgElm
