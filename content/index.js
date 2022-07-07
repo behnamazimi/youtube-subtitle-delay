@@ -61,9 +61,9 @@ function startObservation() {
     }
 
     // in the case of not finding the subtitle element
-    if (checkCount > 5) {
+    if (checkCount > 5 && !delayedSubtitleElm) {
       clearInterval(checkElementInterval)
-      showToast("Could not find the subtitle mechanism, it's maybe off for this content!", 5000)
+      showToast("Could not find the subtitle mechanism, maybe it's not available for this content!", 5000)
     }
   }, 2000)
 }
@@ -129,6 +129,9 @@ function showToast(msg, hideDelay = 3000) {
 
   // append as a sibling of delayed element or as an element of body
   (delayedSubtitleElm?.parentNode || document.body).appendChild(msgElm)
+  if (delayedSubtitleElm?.parentNode) {
+    msgElm.classList.add("on-video")
+  }
 
   if (!hideDelay) {
     return msgElm

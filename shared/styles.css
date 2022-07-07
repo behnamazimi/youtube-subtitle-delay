@@ -160,5 +160,11 @@ body .dyst a {
     width: auto;
     background-color: #000;
     color: #ffffff;
-    z-index: 9999999;
+    z-index: 999;
+}
+
+.dyst-toast.on-video {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.25rem;
 }
