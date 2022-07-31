@@ -95,13 +95,22 @@ body.dyst {
     margin-top: 16px
 }
 
+
+.popup .tip .msg {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
 .popup .tip small {
     margin-top: 6px;
-    display: block;
+    display: flex;
+    align-items: center;
     opacity: 1;
 }
 
-.popup .tip small span{
+.popup .tip small span {
     display: inline-flex;
     border-radius: 4px;
     background-color: var(--dyst-color-success);
@@ -109,4 +118,7 @@ body.dyst {
     height: 20px;
     justify-content: center;
     align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
 }

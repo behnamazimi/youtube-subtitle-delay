@@ -13,7 +13,12 @@ chrome.tabs.onUpdated.addListener(handleTabUpdate);
 
 chrome.runtime.onInstalled.addListener(() => {
   // store initial options
-  storeUtils.storeOptions(generateOptions());
+  const defaultOptions = {
+    delay: 0,
+    decDelayKey: "a",
+    incDelayKey: "d"
+  }
+  storeUtils.storeOptions(generateOptions(defaultOptions));
 });
 
 function handleMessages(data, details, sendResponse) {
@@ -32,7 +37,7 @@ function handleMessages(data, details, sendResponse) {
         options
       });
       chrome.action.setBadgeText({text: generateBadgeText(options.delay)});
-      sendResponse(true);
+      sendResponse(options);
       return true;
   }
 

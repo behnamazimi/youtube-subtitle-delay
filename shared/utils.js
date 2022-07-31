@@ -48,10 +48,20 @@ function generateOptions(optionsObj = {}) {
     delay = defaultDelay
   }
 
-  return {
+  const res = {
     delay,
-    elementSelector
+    elementSelector,
   }
+
+  if (optionsObj.decDelayKey) {
+    res.decDelayKey = optionsObj.decDelayKey
+  }
+
+  if (optionsObj.incDelayKey) {
+    res.incDelayKey = optionsObj.incDelayKey
+  }
+
+  return res
 }
 
 function generateBadgeText(delay) {

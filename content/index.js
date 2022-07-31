@@ -100,9 +100,9 @@ function handleKeyup(e) {
   }
 
   let updatedDelay = null
-  if (e.key === "a") {
+  if (e.key === options.decDelayKey) {
     updatedDelay = +options.delay - 0.2
-  } else if (e.key === "d") {
+  } else if (e.key === options.incDelayKey) {
     updatedDelay = +options.delay + 0.2
   }
 
@@ -110,6 +110,7 @@ function handleKeyup(e) {
     sendGlobalMessage({
       action: globalActions.SET_OPTIONS,
       options: {
+        ...options,
         delay: Math.min(5, Math.max(0, updatedDelay.toFixed(1)))
       }
     })
