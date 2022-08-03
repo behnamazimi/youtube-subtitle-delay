@@ -1,10 +1,8 @@
 {
   "name": "YouTube Subtitle Delay",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Mini tool to delay the YouTube subtitles",
   "permissions": [
-    "tabs",
-    "activeTab",
     "storage"
   ],
   "host_permissions": [
