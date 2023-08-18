@@ -13,6 +13,7 @@ let toastVisibilityInterval = null;
 
 const orgElmObserver = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
+    // console.log(subtitleElm.childNodes[0], subtitleElm.childNodes[0].getAttribute("style"));
     updateDelayedSubtitle(subtitleElm.innerHTML, subtitleElm.getAttribute("style"))
   }
 })
@@ -72,13 +73,9 @@ function updateDelayedSubtitle(nextContent, nextStyles) {
   let delay = (+options.delay * 1000) || 0
 
   setTimeout(() => {
-    delayedSubtitleElm.innerHTML = nextContent.replaceAll("translateY", "translateYFake");
+    delayedSubtitleElm.innerHTML = nextContent//.replaceAll("translateY", "translateYFake");
     delayedSubtitleElm.setAttribute("style", nextStyles)
     delayedSubtitleElm.firstChild.id = ""
-
-    // to have auto generated subtitles delayed
-    delayedSubtitleElm.firstChild.style.width = "unset"
-    delayedSubtitleElm.firstChild.style.transform = "none"
   }, delay);
 }
 
