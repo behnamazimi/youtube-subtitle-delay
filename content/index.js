@@ -13,7 +13,7 @@ let toastVisibilityInterval = null;
 
 const orgElmObserver = new MutationObserver((mutationsList) => {
   for (const mutation of mutationsList) {
-    // console.log(subtitleElm.childNodes[0], subtitleElm.childNodes[0].getAttribute("style"));
+    // get the width of the first element of subtitleElm
     updateDelayedSubtitle(subtitleElm.innerHTML, subtitleElm.getAttribute("style"))
   }
 })
@@ -73,9 +73,11 @@ function updateDelayedSubtitle(nextContent, nextStyles) {
   let delay = (+options.delay * 1000) || 0
 
   setTimeout(() => {
-    delayedSubtitleElm.innerHTML = nextContent//.replaceAll("translateY", "translateYFake");
+    delayedSubtitleElm.innerHTML = nextContent.replaceAll("translateY", "translateYFake");
     delayedSubtitleElm.setAttribute("style", nextStyles)
     delayedSubtitleElm.firstChild.id = ""
+
+    delayedSubtitleElm.firstChild.style.width = `calc(${subtitleElm.clientWidth}px - ${delayedSubtitleElm.firstChild.style.left} + 50px)`;
   }, delay);
 }
 
